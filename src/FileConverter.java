@@ -1,11 +1,6 @@
 import java.io.*;
-import java.nio.file.*;
 import java.util.*;
-import javax.xml.parsers.*;
-import org.w3c.dom.*;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
+
 
 public class FileConverter {
     private static String selectedFolder = "";
@@ -109,12 +104,12 @@ public class FileConverter {
     }
     
     // Métodos de lectura 
-    private static void readCSV(File file) { /* Implementación */ }
-    private static void readJSON(File file) { /* Implementación */ }
-    private static void readXML(File file) { /* Implementación */ }
+    private static void readCSV(File file) { }
+    private static void readJSON(File file) { }
+    private static void readXML(File file) { }
     
     // Métodos de escritura 
-    private static void writeCSV(File file) { /* Implementación */ }
-    private static void writeJSON(File file) { /* Implementación */ }
-    private static void writeXML(File file) { /* Implementación */ }
+    private static void writeCSV(File file) { }
+    private static void writeJSON(File file) { }
+    private static void writeXML(File file) { }
 }
