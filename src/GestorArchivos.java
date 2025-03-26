@@ -54,7 +54,6 @@ public class GestorArchivos {
                     String formato = scanner.nextLine();
                     System.out.print("Ingrese el nombre del archivo de salida: ");
                     String nombreSalida = scanner.nextLine();
-                   // escribirArchivo(formato, nombreSalida); Tu función Angel
                     break;
                 case 4:
                     System.out.println("Saliendo...");
