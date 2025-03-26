@@ -1,0 +1,4 @@
+[
+  {"Marca": "Toyota", "Modelo": "Corolla", "Año": 2020, "Color": "Blanco", "Precio": 25000.00},
+  {"Marca": "Honda", "Modelo": "Civic", "Año": 2019, "Color": "Azul", "Precio": 22000.00}
+]

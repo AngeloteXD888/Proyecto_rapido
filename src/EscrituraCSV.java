@@ -20,6 +20,31 @@ class Coche {
     public String toCSV() {
         return marca + "," + modelo + "," + año + "," + color + "," + precio;
     }
+
+    public int getPrecio() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPrecio'");
+    }
+
+    public int getColor() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getColor'");
+    }
+
+    public int getAño() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAño'");
+    }
+
+    public String getMarca() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMarca'");
+    }
+
+    public String getModelo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getModelo'");
+    }
 }
 
 public class EscrituraCSV {
