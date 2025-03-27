@@ -1,24 +1,23 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
-public class Escriturajson {
-    public static void main(String[] args) {
-        // Crear un JSON manualmente como String
-        String json = "[\n" +
-                "  {\"Marca\": \"Toyota\", \"Modelo\": \"Corolla\", \"Año\": 2020, \"Color\": \"Blanco\", \"Precio\": 25000.00},\n" +
-                "  {\"Marca\": \"Honda\", \"Modelo\": \"Civic\", \"Año\": 2019, \"Color\": \"Azul\", \"Precio\": 22000.00}\n" +
-                "]";
-
-        // Escribir en un archivo
-        escribirJson(json, "coches_salida.json");
-    }
-
-    public static void escribirJson(String json, String nombreArchivo) {
-        try (FileWriter writer = new FileWriter(nombreArchivo)) {
-            writer.write(json);
-            System.out.println("Archivo JSON escrito correctamente: " + nombreArchivo);
-        } catch (IOException e) {
-            System.err.println("Error al escribir el archivo JSON: " + e.getMessage());
+public class EscritorJSON {
+    public static void escribir(List<Coche> coches, String archivoSalida) throws IOException {
+        try (FileWriter writer = new FileWriter(archivoSalida)) {
+            writer.write("[\n");
+            for (int i = 0; i < coches.size(); i++) {
+                Coche coche = coches.get(i);
+                writer.write(String.format("  {\n    \"marca\": \"%s\",\n    \"modelo\": \"%s\",\n    \"año\": %d,\n    \"color\": \"%s\",\n    \"precio\": %.2f\n  }",
+                    coche.getMarca(),
+                    coche.getModelo(),
+                    coche.getAño(),
+                    coche.getColor(),
+                    coche.getPrecio()));
+                if (i < coches.size() - 1) writer.write(",\n");
+            }
+            writer.write("\n]");
         }
     }
 }
+
