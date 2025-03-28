@@ -7,7 +7,7 @@ public class GestorArchivos {
     private static String archivoSeleccionado = "";
     private static List<Map<String, String>> datos = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("\nMenú:");
@@ -54,7 +54,7 @@ public class GestorArchivos {
                     String formato = scanner.nextLine();
                     System.out.print("Ingrese el nombre del archivo de salida: ");
                     String nombreSalida = scanner.nextLine();
-                   // escribirArchivo(formato, nombreSalida); Tu función Ángel
+                    escribirArchivo(formato, nombreSalida);
                     break;
                 case 4:
                     System.out.println("Saliendo...");
@@ -92,5 +92,26 @@ public class GestorArchivos {
         }
     }
     
-    
+    @SuppressWarnings("unused")
+    private static void escribirArchivo(String formato, String nombreSalida) throws IOException {
+        if (datos.isEmpty()) {
+            System.out.println("No hay datos para escribir.");
+            return;
+        }
+        
+        String rutaSalida = rutaCarpeta + "/" + nombreSalida;
+        switch (formato.toLowerCase()) {
+            case "csv":
+                EscrituraCSV.escribir(null, rutaSalida);
+                break;
+            case "json":
+                Escriturajson.escribir(null, rutaSalida);
+                break;
+            case "xml":
+                EscrituraXML.escribir(null, rutaSalida);
+                break;
+            default:
+                System.out.println("Formato no soportado.");
+        }
+    }
 }

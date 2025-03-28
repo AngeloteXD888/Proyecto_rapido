@@ -2,7 +2,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-public class EscritorJSON {
+public class Escriturajson {
     public static void escribir(List<Coche> coches, String archivoSalida) throws IOException {
         try (FileWriter writer = new FileWriter(archivoSalida)) {
             writer.write("[\n");
