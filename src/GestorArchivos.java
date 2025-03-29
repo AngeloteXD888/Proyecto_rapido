@@ -2,6 +2,12 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 
+
+/**
+ * @author Lucia Garrido Chocarro
+ * @author Ángel Galea Anisa
+ */
+
 public class GestorArchivos {
     private static String rutaCarpeta = "";
     private static String archivoSeleccionado = "";
